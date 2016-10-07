@@ -1,6 +1,6 @@
 var data = {
   "name": "",
-  "rating": 0,
+  "rating": 2,
 
  "children": [
 
@@ -20,7 +20,7 @@ var data = {
 
     {
      "name": "Porters","size": 5,
-     "rating": 0,
+     "rating": 2,
      "children": [
         {
           "name": "Baltic", "size": 5
@@ -74,7 +74,7 @@ var data = {
 
     {
      "name": "Belgians","size": 5,
-     "rating": 0,
+     "rating": 1,
      "children": [
         {
           "name": "Abbey", "size": 5
@@ -141,7 +141,7 @@ var data = {
 
      {
      "name": "Bocks","size": 5,
-     "rating": 0,
+     "rating": 2,
      "children": [
         {
           "name": "Eisbock", "size": 5
@@ -157,7 +157,7 @@ var data = {
 
     {
      "name": "Pale Lagers","size": 5,
-     "rating": 0,
+     "rating": 1,
      "children": [
         {
           "name": "American", "size": 5
@@ -198,7 +198,7 @@ var data = {
 
     {
      "name": "Ambers","size": 5,
-     "rating": 0,
+     "rating": 1,
      "children": [
         {
           "name": "Vienna", "size": 5
@@ -230,7 +230,7 @@ var wheelHide = function(){
     }
   };
 var literallyNothing = function(){
-  console.log('nothing lol')
+  console.log('')
 }
 
 var width = 320,
@@ -265,7 +265,6 @@ var arc = d3.svg.arc()
 
 var generateChart = function(scope, elem, attrs) {
   var color = d3.scale.threshold().domain([-3,-2,-1,0,1,2,3]).range(["#FFD54F","#B71C1C","#EF5350","#EF9A9A","#FFD54F","#81C784","#43A047","#1B5E20"]);
-    // var color = d3.scale.threshold().domain([-3,-2,-1,0,1,2,3]).range(["#FFFFFF"]);
       var svg = d3.select(elem[0]).append("svg")
         .attr("width", width)
         .attr("height", height + 100)
