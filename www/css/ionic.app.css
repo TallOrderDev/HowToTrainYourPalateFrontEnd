@@ -9644,11 +9644,13 @@ a.button {
   max-width: 300px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
-  border-radius: 8px; }
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 2px 0px black;
+  -moz-box-shadow: 0px 2px 0px black;
+  box-shadow: 0px 2px 0px black; }
 
 .beer-rating-card {
   background-color: white;
-  border: 1px solid white;
   padding: 15px;
   margin: 0 auto;
   margin-top: 3%;
@@ -9660,7 +9662,10 @@ a.button {
   max-width: 300px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
-  border-radius: 8px; }
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 3px 0px #001a1a;
+  -moz-box-shadow: 0px 3px 0px #001a1a;
+  box-shadow: 0px 3px 0px #001a1a; }
 
 .starRating {
   margin-left: 20%; }
@@ -9696,7 +9701,7 @@ a.button {
   -moz-border-radius: 8px;
   border-radius: 8px; }
 
-.star-chart {
+.beer-chart {
   display: block; }
 
 .tag {
@@ -9706,8 +9711,8 @@ a.button {
   padding: 10px;
   margin: 5px;
   font-size: 0.8em;
-  color: black;
-  border: 1px solid black;
+  color: #d6d6d6;
+  border: 1px solid #d6d6d6;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px; }
@@ -9772,6 +9777,57 @@ a.button {
   -moz-border-radius: 8px;
   border-radius: 8px; }
 
+.animate-show.ng-hide-remove {
+  transition: all linear 0.4s; }
+
+.animate-show.ng-hide {
+  opacity: 0; }
+
+.animate-show.ng-show-add {
+  transition: all linear 0.4s; }
+
+.animate-show.ng-show {
+  opacity: 1; }
+
+.sipped-container > input {
+  display: none;
+  opacity: 0; }
+
+.sipped-container > label {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-family: "Sanchez", serif;
+  font-size: 1.2em;
+  max-width: 200px;
+  color: black;
+  background-color: #F76264;
+  -webkit-box-shadow: 0px 2px 0px #b7090c;
+  -moz-box-shadow: 0px 2px 0px #b7090c;
+  box-shadow: 0px 2px 0px #b7090c;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
+  .sipped-container > label:active {
+    -webkit-box-shadow: inset 0px 2px 0px #b7090c;
+    -moz-box-shadow: inset 0px 2px 0px #b7090c;
+    box-shadow: inset 0px 2px 0px #b7090c; }
+
+.yep {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  max-width: 200px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
+
 .title {
   color: #222222; }
 
@@ -9800,10 +9856,10 @@ a.button {
 
 .home-description-title {
   font-family: "Sanchez", serif;
-  font-size: 1.6em;
-  padding-top: 15px;
-  padding-left: 15px;
-  padding-right: 15px; }
+  font-size: 1.2em;
+  padding: 10px;
+  margin-bottom: 0;
+  line-height: 1.5; }
 
 .button.home {
   display: block;
@@ -9829,7 +9885,17 @@ a.button {
     box-shadow: inset 1px 1px 1px #e8e8e8; }
 
 .home-description {
-  padding: 15px; }
+  padding: 15px;
+  font-size: 1.1em; }
+
+.home-description-list {
+  padding: 10px;
+  margin: 0; }
+
+li {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  line-height: 1.5; }
 
 .home-description.larger {
   text-align: center;
@@ -9872,9 +9938,10 @@ a.button {
 .home-title {
   font-family: "Sanchez", serif;
   font-size: 1.9em;
-  line-height: 1.3;
+  line-height: 1.5;
   color: white;
   text-align: center;
+  margin: 0;
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -9884,16 +9951,18 @@ a.button {
 .home-card {
   display: block;
   background-color: white;
-  border: 1px solid white;
   padding: 5px;
   margin: 0 auto;
   margin-top: 15px;
   margin-bottom: 15px;
   max-width: 300px;
   line-height: 1.5;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px; }
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 2px 0px #14a58f;
+  -moz-box-shadow: 0px 2px 0px #14a58f;
+  box-shadow: 0px 2px 0px #14a58f; }
 
 .home-scroll-content {
   background-color: #4EEAD2; }
@@ -9907,8 +9976,8 @@ a.button {
   border-bottom: 1px solid #e8e8e8; }
 
 .button.button-block {
-  min-width: 50%;
-  max-width: 60%;
+  min-width: 120px;
+  max-width: 120px;
   background-color: black;
   color: white;
   margin: 0 auto;
@@ -9921,7 +9990,7 @@ a.button {
   border-radius: 8px; }
 
 .login-scroll-content {
-  background-color: #AD1457; }
+  background-color: #FFCD00; }
 
 .custom-button {
   background-color: white;
@@ -9942,9 +10011,15 @@ a.button {
   margin-bottom: 15px;
   max-width: 300px;
   line-height: 1.1;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px; }
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 2px 0px #806700;
+  -moz-box-shadow: 0px 2px 0px #806700;
+  box-shadow: 0px 2px 0px #806700; }
+
+.input-label {
+  font-family: "Sanchez", serif; }
 
 textarea,
 input[type="text"],
@@ -10095,8 +10170,8 @@ input[type="color"] {
   font-family: "Sanchez", serif;
   padding: 10px;
   padding: 10px;
-  background-color: #F76264;
-  border: 1px solid #F76264;
+  background-color: #2E383F;
+  border: 1px solid #2E383F;
   max-width: 280px;
   color: white;
   -webkit-border-radius: 8px;
@@ -10132,7 +10207,7 @@ input[type="color"] {
   -moz-border-radius: 8px;
   border-radius: 8px; }
 
-.click-container {
+.profile-card {
   display: block;
   background-color: white;
   border: 1px solid white;
@@ -10143,14 +10218,34 @@ input[type="color"] {
   max-width: 300px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
-  border-radius: 8px; }
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 2px 0px #845204;
+  -moz-box-shadow: 0px 2px 0px #845204;
+  box-shadow: 0px 2px 0px #845204; }
 
-.click-title {
+.profile-card-title {
   font-family: "Sanchez", serif;
   color: black;
   font-size: 1.5em;
   text-align: center;
   margin-bottom: 20px; }
+
+.help {
+  position: relative;
+  left: 50px;
+  top: 10px; }
+
+.popup-container.active .popup {
+  background-color: white;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px; }
+
+.popup-buttons .button:last-child {
+  background-color: #F9A828;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
 
 .seem-to-preference-title {
   font-family: "Sanchez", serif;
@@ -10158,7 +10253,13 @@ input[type="color"] {
   margin-bottom: 20px; }
 
 .profile-scroll-content {
-  background-color: #FFD54F; }
+  background-color: #F9A828; }
+
+.profile-card-li {
+  margin: 0;
+  text-align: left;
+  padding: 5px;
+  font-size: 1.1em; }
 
 path {
   stroke: black;
@@ -10166,8 +10267,7 @@ path {
 
 text {
   font-family: "Open Sans", sans-serif;
-  font-size: 10px;
-  font-weight: bold; }
+  font-size: 13px; }
 
 .beer-type-2 {
   opacity: 0; }
@@ -10177,20 +10277,28 @@ text {
   text-align: left;
   font-size: 1.1em;
   background-color: white;
-  border: 1px solid white;
   padding: 15px;
   margin: 0 auto;
   margin-top: 15px;
   margin-bottom: 15px;
   max-width: 280px;
   line-height: 1.5;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px; }
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 2px 0px #0f2434;
+  -moz-box-shadow: 0px 2px 0px #0f2434;
+  box-shadow: 0px 2px 0px #0f2434; }
+
+.new-recs {
+  -webkit-box-shadow: 0px 2px 0px #3f6666;
+  -moz-box-shadow: 0px 2px 0px #3f6666;
+  box-shadow: 0px 2px 0px #3f6666; }
 
 .recs-title {
   font-family: "Sanchez", serif;
-  font-size: 1.5em;
+  margin: 0;
+  font-size: 1.2em;
   color: white;
   position: relative;
   top: 50%;
@@ -10198,9 +10306,15 @@ text {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%); }
 
+.recs-body-title {
+  font-size: 1.3em;
+  line-height: 1.5;
+  font-family: "Sanchez", serif;
+  text-align: left; }
+
 .recs-body {
-  font-size: 1.1em;
-  line-height: 1.4; }
+  font-size: 1em;
+  line-height: 1.5; }
 
 h1.rating-text {
   font-family: "Sanchez", serif;
@@ -10213,7 +10327,7 @@ h1.rating-text {
   background-color: #88B6B6; }
 
 .old-recs-scroll-content {
-  background-color: teal; }
+  background-color: #3176AB; }
 
 .coasters-container {
   display: block;
@@ -10226,12 +10340,12 @@ h1.rating-text {
   margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 20px;
-  -webkit-box-shadow: 2px 2px 0px #424242;
-  -moz-box-shadow: 2px 2px 0px #424242;
-  box-shadow: 2px 2px 0px #424242;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px; }
+  -webkit-box-shadow: 0px 2px 0px #6d5200;
+  -moz-box-shadow: 0px 2px 0px #6d5200;
+  box-shadow: 0px 2px 0px #6d5200;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px; }
 
 .slide {
   font-size: 0.8em;
@@ -10244,6 +10358,7 @@ h1.rating-text {
   width: 100px;
   height: 100px;
   font-size: 1em;
+  font-weight: bold;
   text-align: center;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -10288,7 +10403,10 @@ h1.rating-text {
   max-width: 300px; }
 
 .rating-card.beer-detailed-description {
-  text-align: left; }
+  text-align: left;
+  -webkit-box-shadow: 0px 2px 0px #959412;
+  -moz-box-shadow: 0px 2px 0px #959412;
+  box-shadow: 0px 2px 0px #959412; }
 
 .rating_confirm-content {
   font-size: 1em; }
