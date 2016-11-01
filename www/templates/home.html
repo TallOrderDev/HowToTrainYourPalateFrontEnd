@@ -1,18 +1,24 @@
-<ion-view hide-nav-bar="true" view-title="Home">
+<ion-view view-title="Home" hide-back-button="true">
+
   <ion-content class='home-scroll-content'>
-    <div class='home-title-coaster'><h1 class='home-title'>Welcome to <b>CraftEd</b></h1></div>
-    <div class='home-card'>
-      <h1 class='home-description-title'>Better drinking through (computer) science!</h1>
+    <div class='home-title-coaster'>
+      <h1 class='home-title'>Welcome to <b>CraftEd</b></h1>
     </div>
-      <div class='home-card'>
-      <p class='home-description larger'>Let's Get Started!</p>
-        <div class='home-button-container'>
-          <a href="#/app/register" class="button home">Register</a>
-          <a href="#/app/login" class="button home">Login</a>
-        </div>
+
+    <div class='home-card' ng-controller='HomeController'>
+      <h1 class='home-description-title'>Better beer drinking through (computer) science!</h1>
+      <div class='home-button-container'>
+        <h1 class='home-description-title button home' ng-click='showPopup()'>Learn More</h1>
       </div>
-      <!-- <form name="logoutForm" ng-controller="UserController">
-          <button ng-click="logout()" class="button home" type="submit">Log Out</button>
-      </form> -->
+    </div>
+    
+    <div class='home-card'>
+    <p class='home-description larger'>Let's Get Started!</p>
+      <div class='home-button-container'>
+        <a href="#/app/register" class="button home">Register</a>
+        <a href="#/app/login" class="button home">Login</a>
+      </div>
+    </div>
   </ion-content>
+
 </ion-view>
