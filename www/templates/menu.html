@@ -1,22 +1,5 @@
 <div ng-app="craftEd" ng-controller="MenuController">
-  <div ng-if="!currentVersionCheck">
-    <br>
-    <p>
-      <h3>CraftEd</h3>
-    </p>
-    <p>
-      Sorry friend, you have an old version of CraftEd!
-    </p>
-    <p>
-      Please go to the app store and upgrade to continue expanding your palate.
-    </p>
-    <br>
-    <br>
-    <p>
-      Thanks for your patience, we are always trying to make CraftEd better for you! 
-    </p>
-  </div>
-  <div ng-if="currentVersionCheck">
+  <div ng-show="currentVersionCheck">
     <ion-side-menus enable-menu-with-back-views="true" drag-content="false">
       <ion-side-menu-content>
         <ion-nav-bar class="bar-stable">
@@ -51,5 +34,22 @@
         </ion-content>
       </ion-side-menu>
     </ion-side-menus>
+  </div>
+  <div ng-hide="currentVersionCheck">
+    <br>
+    <p>
+      <h3>CraftEd</h3>
+    </p>
+    <p>
+      Sorry friend, you have an old version of CraftEd!
+    </p>
+    <p>
+      Please go to the app store and upgrade to continue expanding your palate.
+    </p>
+    <br>
+    <br>
+    <p>
+      Thanks for your patience, we are always trying to make CraftEd better for you! 
+    </p>
   </div>
 </div>

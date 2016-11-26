@@ -13,9 +13,12 @@
       }
     };
 
+
+
     $http.get(rootUrl + '/current/1.0', config)
       .then(function(response){
-        $scope.currentVersionCheck = response.data
+        $scope.currentVersionCheck =  true
+        console.log("Dogs")
       });
 
     $scope.$on("$ionicView.enter", function(event, data){
@@ -37,11 +40,4 @@
     $ionicSideMenuDelegate.toggleLeft();
   };
 
-  $scope.currentT = function(){
-    return true
-  };
-
-  $scope.currentF = function(){
-    return false
-  };
 }]);

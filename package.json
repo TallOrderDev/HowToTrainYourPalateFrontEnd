@@ -1,7 +1,7 @@
 {
-  "name": "howtotrainyourpalate",
+  "name": "CraftEd",
   "version": "1.1.1",
-  "description": "HowToTrainYourPalate: An Ionic project",
+  "description": "CraftEd: An Ionic project",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^2.0.4",
