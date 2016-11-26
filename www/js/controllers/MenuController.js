@@ -5,7 +5,19 @@
   //$scope.$on('$ionicView.enter', function(e) {
   //});
 
-  craftEd.controller('MenuController', ['$scope', '$ionicSideMenuDelegate', function($scope, $ionicSideMenuDelegate) {
+  craftEd.controller('MenuController', ['$scope', '$ionicSideMenuDelegate', '$http', function($scope, $ionicSideMenuDelegate, $http) {
+
+    var config = {
+      headers: {
+        'content-type': 'application/json'
+      }
+    };
+
+    $http.get(rootUrl + '/current/1.0', config)
+      .then(function(response){
+        $scope.currentVersionCheck = response.data
+      });
+
     $scope.$on("$ionicView.enter", function(event, data){
       if(window.sessionStorage.length){
         $scope.showLogin = false;
@@ -20,17 +32,16 @@
         $scope.showProfile = false;
       }
     });
-    var tokens = {
-      headers: {
-        "access-token": window.sessionStorage.token,
-        "token-type": "Bearer",
-        "client": window.sessionStorage.client,
-        "expiry": window.sessionStorage.expiry,
-        "uid": window.sessionStorage.uid
-      }
-    };
 
   $scope.toggleLeft = function() {
     $ionicSideMenuDelegate.toggleLeft();
+  };
+
+  $scope.currentT = function(){
+    return true
+  };
+
+  $scope.currentF = function(){
+    return false
   };
 }]);

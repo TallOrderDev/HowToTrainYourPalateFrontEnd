@@ -7,10 +7,7 @@
 
 var rootUrl = 'http://how-to-train-your-palate-api.herokuapp.com'
 // var rootUrl = 'http://localhost:3000'
-
 const craftEd = angular.module('craftEd', ['ionic'])
-
-
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -40,7 +37,6 @@ const craftEd = angular.module('craftEd', ['ionic'])
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
-
   .state('app',{
     url: '/app',
     abstract: true,
@@ -146,4 +142,3 @@ const craftEd = angular.module('craftEd', ['ionic'])
   $urlRouterProvider.otherwise('/app/home');
 
 });
-

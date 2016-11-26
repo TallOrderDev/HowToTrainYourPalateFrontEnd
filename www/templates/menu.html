@@ -1,40 +1,55 @@
 <div ng-app="craftEd" ng-controller="MenuController">
-<ion-side-menus enable-menu-with-back-views="true" drag-content="false">
-
-  <ion-side-menu-content>
-    <ion-nav-bar class="bar-stable">
-      <ion-nav-back-button class="button-clear">
-        <i class="ion-ios-arrow-back"></i>
-      </ion-nav-back-button>
-
-      <ion-nav-buttons side="left">
-        <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
-      </ion-nav-buttons>
-
-    </ion-nav-bar>
-    <ion-nav-view name="menuContent"></ion-nav-view>
-  </ion-side-menu-content>
-
-  <ion-side-menu side="left">
-    <ion-header-bar class="bar-stable menu-bar">
-      <h1 class="title burger-menu-title">CraftEd</h1>
-    </ion-header-bar>
-    <ion-content class='menu-body'>
-      <ion-list>
-        <ion-item menu-close href="#/app/login" ng-show="showLogin">
-          <div class='menu-item-content'>Login</div>
-        </ion-item>
-        <ion-item menu-close href="#/app/register" ng-show="showRegister">
-          <div class='menu-item-content'>Register</div>
-        </ion-item>
-        <ion-item menu-close href="#/app/profile" ng-show="showProfile">
-          <div class='menu-item-content'>Profile</div>
-        </ion-item>
-        <ion-item menu-close href='#/app/home' ng-show="showLogout">
-          <div class='logout-button' ng-click="logout()" ng-controller='UserController'><div class='menu-item-content'>Logout</div></div>
-        </ion-item>
-      </ion-list>
-    </ion-content>
-  </ion-side-menu>
-</ion-side-menus>
+  <div ng-if="!currentVersionCheck">
+    <br>
+    <p>
+      <h3>CraftEd</h3>
+    </p>
+    <p>
+      Sorry friend, you have an old version of CraftEd!
+    </p>
+    <p>
+      Please go to the app store and upgrade to continue expanding your palate.
+    </p>
+    <br>
+    <br>
+    <p>
+      Thanks for your patience, we are always trying to make CraftEd better for you! 
+    </p>
+  </div>
+  <div ng-if="currentVersionCheck">
+    <ion-side-menus enable-menu-with-back-views="true" drag-content="false">
+      <ion-side-menu-content>
+        <ion-nav-bar class="bar-stable">
+          <ion-nav-back-button class="button-clear">
+            <i class="ion-ios-arrow-back"></i>
+          </ion-nav-back-button>
+          <ion-nav-buttons side="left">
+            <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+          </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+      </ion-side-menu-content>
+      <ion-side-menu side="left">
+        <ion-header-bar class="bar-stable menu-bar">
+          <h1 class="title burger-menu-title">CraftEd</h1>
+        </ion-header-bar>
+        <ion-content class='menu-body'>
+          <ion-list>
+            <ion-item menu-close href="#/app/login" ng-show="showLogin">
+              <div class='menu-item-content'>Login</div>
+            </ion-item>
+            <ion-item menu-close href="#/app/register" ng-show="showRegister">
+              <div class='menu-item-content'>Register</div>
+            </ion-item>
+            <ion-item menu-close href="#/app/profile" ng-show="showProfile">
+              <div class='menu-item-content'>Profile</div>
+            </ion-item>
+            <ion-item menu-close href='#/app/home' ng-show="showLogout">
+              <div class='logout-button' ng-click="logout()" ng-controller='UserController'><div class='menu-item-content'>Logout</div></div>
+            </ion-item>
+          </ion-list>
+        </ion-content>
+      </ion-side-menu>
+    </ion-side-menus>
+  </div>
 </div>
