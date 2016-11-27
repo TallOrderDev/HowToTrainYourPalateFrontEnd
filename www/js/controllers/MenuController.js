@@ -13,12 +13,9 @@
       }
     };
 
-
-
     $http.get(rootUrl + '/current/1.0', config)
       .then(function(response){
-        $scope.currentVersionCheck =  true
-        console.log("Dogs")
+        $scope.currentVersionCheck = response.data
       });
 
     $scope.$on("$ionicView.enter", function(event, data){
