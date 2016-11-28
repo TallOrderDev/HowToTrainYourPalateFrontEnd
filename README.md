@@ -1,5 +1,7 @@
 # Welcome to CraftEd
 
+### Mobile app now available in the [Google Playstore](https://play.google.com/store/apps/details?id=com.ionicframework.howtotrainyourpalate780973)
+
 ![Main2](images/mockup4.png)
 
 **CraftEd is a hybrid mobile web application that help users discover(or rediscover) their beer palate.**
@@ -9,9 +11,11 @@
 ![Main1](images/mockup3.png)
 
 ## Usage
-**Mobile App coming soon to the Google Play Store**
+Android App is now available on [Google Play Store](https://play.google.com/store/apps/details?id=com.ionicframework.howtotrainyourpalate780973)
 
-If you'd like to try the app, send an email to **ericyang321@gmail.com**.
+iOS app is currently under review. 
+
+>If you'd like to try the app on **iOS**, send an email to **ericyang321@gmail.com**.
 
 ## Develop
 Clone this repo and run `npm install` to download all relevant packages.
@@ -29,7 +33,7 @@ $ ionic emulate
 
 More detailed instructions can be found [here](https://ionicframework.com/docs/guide/testing.html).
 
-####Scss
+#### SCSS
 For scss auto-compilation, run:
 
 ```
